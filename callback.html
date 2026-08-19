@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting&hellip;</title>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<p id="message">Redirecting&hellip;</p>
+<p id="fallback" style="display:none">
+  If this page did not redirect automatically,
+  <a id="fallback-link" href="#">click here to continue</a>.
+</p>
+<script>
+  var target = "http://localhost:8080/callback" + window.location.search;
+  document.getElementById("fallback-link").href = target;
+  document.getElementById("fallback").style.display = "block";
+  window.location.replace(target);
+</script>
+</body>
+</html>
